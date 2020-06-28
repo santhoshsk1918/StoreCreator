@@ -44,6 +44,7 @@ const AddStore = (props) => {
 
     return (
         <React.Fragment>
+            <Row className={"ml-5 pl-5"}><h3>Add Store</h3></Row>
             <Row className={"mt-3"}>
                 <Col md={3} xs={12}></Col>
                 <Col md={6} xs={12}>

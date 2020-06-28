@@ -5,10 +5,6 @@ var shopMongoModel = mongoose.Schema({
         type: Number,
         index: true
     },
-    categoryName: {
-        type: String,
-        index: true
-    },
     productName: {
         type: String,
         index: true
@@ -18,9 +14,6 @@ var shopMongoModel = mongoose.Schema({
     },
     price: {
         type: String
-    },
-    availability: {
-        type: Boolean
     }
 })
 

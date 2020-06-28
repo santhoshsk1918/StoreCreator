@@ -8,27 +8,31 @@ import Profile from "./Profile";
 import NotFound from "./NotFound";
 import {Container} from "react-bootstrap";
 import AddStore from "./AddStore";
+import AddProducts from "./AddProducts";
 
 const HomeComponent = () => {
     let {loggedInUser, setUser} = useContext(UserContext);
     return (
 
         <React.Fragment>
-            <Header />
-            <Container fluid className={"main-app"}>
-                {
-                    !loggedInUser.isLoggedIn ? <HomePage/>
-                        :
-                        <Router>
-                            <Switch>
-                                <Route exact path={"/"} component={Profile}/>
-                                <Route exact path={"/addStore"} component={AddStore}/>
-                                <Route component={NotFound}/>
-                            </Switch>
-                        </Router>
-                }
-            </Container>
-            <Footer />
+            <Router>
+                <Header />
+                <Container fluid className={"main-app"}>
+                    {
+                        !loggedInUser.isLoggedIn ? <HomePage/>
+                            :
+
+                                <Switch>
+                                    <Route exact path={"/"} component={Profile}/>
+                                    <Route exact path={"/addStore"} component={AddStore}/>
+                                    <Route exact path={"/addProducts/:id"} component={AddProducts}/>
+                                    <Route component={NotFound}/>
+                                </Switch>
+
+                    }
+                </Container>
+                <Footer />
+            </Router>
         </React.Fragment>
     );
 };
