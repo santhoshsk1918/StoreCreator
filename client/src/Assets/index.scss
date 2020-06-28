@@ -1,0 +1,19 @@
+$app-primary: #4d3e3e;
+$app-secondary: #fff3cd;
+$app-compliment-one: #ffc38b;
+$app-compliment-two: #ff926b;
+
+$theme-colors: (
+        "app-primary": $app-primary,
+        "app-secondary": $app-secondary,
+        "app-compliment-one": $app-compliment-one,
+        "app-compliment-two": $app-compliment-two,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.main-app {
+  min-height: calc(100vh - 100px);
+  text-align: center;
+}
+
